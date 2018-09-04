@@ -1,0 +1,22 @@
+<!--
+Program: Arrays- assigned by reference , assigning array to a new variable creates a pointer to the original array
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passing array by refernce</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+		var myArray = ['zero','one','two','three','four','five'];
+		var newArray = myArray;
+		newArray[1] = 'changed';
+
+	
+		document.write(myArray[1]); //outputs changed
+</script>
+</body>
+</html>

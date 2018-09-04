@@ -1,0 +1,42 @@
+<!--
+Program: Arrays- map method will call the provided function for each value of the array and it will return an array containing the 
+results of those function calls
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array map </title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var isNumeric = function(x){
+
+
+			//returns true if x is numeric and false if it is not
+			var RegExp = /^(-)?(\d*)(\.?)(\d*)$/;
+			return String(x).match(RegExp);
+		}
+
+
+		var testElement = function(x){
+			if(isNumeric(x)){
+				return x;
+			} else {
+				return 0;
+			}
+		}
+var myArray = [1,'two',3,'four',5,'six',7,'eight',9,'ten'];
+var newArray = myArray.map(testElement);
+document.write(newArray); // outputs: 1,0,3,0,5,0,7,0,9,0
+
+		
+</script>
+		
+</body>
+
+
+</html>

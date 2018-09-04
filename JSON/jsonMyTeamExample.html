@@ -1,0 +1,95 @@
+<!-- Program: Example of using JSON 
+-->
+
+
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang ="eng" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src = "ajax.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+		//JSON data for myTeam which contists of an array of players
+	 var myTeam = {"info":{
+	 						"name":"Ireland",
+	 			 			"type":"rubgy"},
+	 			 "Players":[
+	 			  {"number":1,
+	 			  "position":"forward",
+	 			   "fName":"Mike",
+	 			   "lName":"Ross",
+	 			   "age":25,
+	 			   "contact":987654,
+	 			   "club":"Lenister"},
+	 			   {"number":8,
+	 				"position":"forward",
+	 				"fName":"Paul",
+	 				"lName":"oConnell",
+	 				"age":22,
+	 				"contact": 123456,
+	 				"club":"Munster"},
+	 				{"number":15,
+	 				"position":"back",
+	 				"fName":"Rob",
+	 				"lName":"Kearney",
+	 				"age":16,
+	 				"contact":654321,
+	 				"club": "Lenister"}
+
+	 				]
+	 			};
+
+
+	 function displayProperty(propertyName)
+	 {
+	 	for(var j in myTeam.Players[i] )
+	 	{
+	 		if(j == propertyName || propertyName == null){
+	 			document.write(j + ":" + myTeam.Players[i][j] + "<br/>");
+	 		}
+	 	}
+	 }
+
+</script>
+
+	<title>Simple JSON Demo</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font size = "+3">Json Demo</font></p>
+<hr/>
+
+<div id = "zone"></div>
+
+<p>
+<h3> Here are the contents myTeam Objects:</h3>
+
+<script type="text/javascript">
+	document.write("Team info:");
+	document.write("Name: " + myTeam.info.name); //outputs: Ireland
+	document.write(" Type: " + myTeam.info.type + "</br>"); //outputs: rubgy2
+	
+
+
+	document.write("<h2> Players: </h2>");
+	for (var i=0;i<myTeam.Players.length;i++)
+	{
+		 //choose players between the ages of 20-25
+		if(myTeam.Players[i].age <= 25 && myTeam.Players[i].age >= 20){
+
+			//diplay properties
+			displayProperty();
+		}
+
+		document.write("<br/>");
+	}
+
+		document.write("<br/><hr/>");
+
+</script>
+</p>
+<br/>
+
+</body>
+</html>

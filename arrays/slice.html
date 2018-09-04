@@ -1,0 +1,32 @@
+<!--
+Program: Arrays- slice method copies a block of the array and returns it to the new variable.The slice will begin at zero if not specify
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array slice </title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [1,2,3,4,5,6,7,8,9,10];
+
+		document.write(myArray + '<br>'); // outputs: 1,2,3,4,5,6,7,8,9,10
+
+		var newArray =  myArray.slice();
+		document.write(newArray + '<br>'); //outputs: 1,2,3,4,5,6,7,8,9,10
+
+		var newArray = myArray.slice(5);
+		document.write(newArray + '<br>'); // outputs: 6,7,,8,9,10
+
+		var newArray = myArray.slice(5,7);
+		document.write(newArray + '<br>'); // outputs: 6,7
+				
+</script>
+		
+</body>
+
+</html>

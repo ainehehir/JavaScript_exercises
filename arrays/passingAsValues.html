@@ -1,0 +1,35 @@
+<!--
+Program: Arrays- pass an array by value instead of by reference by using thhe Array.slice() method
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passing arrays as Value</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = ['zero','one','two','three','four','five'];
+
+		var newArray = myArray.slice();
+
+		newArray[1]= 'changed';
+
+		document.write(myArray[1]+ '<br>'); //outputs: one
+
+		function passedByReference(reArray){
+			reArray[1] = 'changed';
+		}
+
+		passedByReference(myArray.slice());
+		document.write(myArray[1]); // outputs: one
+
+</script>
+		
+</body>
+
+
+</html>

@@ -1,0 +1,27 @@
+<!--
+Program: Arrays- forEach method: Pass each elemnt of the array to the passed function
+this method will pass the current value, current index and a pointer to the array to your function 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array forEach</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var printArray = function(x,idx){
+			document.write('['+idx+'] = '+x + '<br>');
+		}
+
+		var myArray = [1,'two',3,'four',5];
+		myArray.forEach(printArray); // ouputs: [0] = 1 [1]= two [2] = 3 [3] = four [4] =5	
+</script>
+		
+</body>
+
+
+</html>

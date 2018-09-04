@@ -1,0 +1,59 @@
+<!--
+Program: Ajax example
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+<script type="text/javascript">
+	// instantiate the XMLHttpRequestObject
+	var XMLHttpRequestObject = false;
+
+// check to see if the XMLHttpRequest object is supported by the browser
+	if(window.XMLHttpRequest){
+		XMLHttpRequestObject = new XMLHttpRequest();
+	} else if (window.ActiveXObject){
+		XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	function getData(datasource, divId){
+
+		if(XMLHttpRequestObject){
+			var obj = document.getElementById(divId);
+			// to send the request to the server use the open() and send() methods
+			// GET referes to the type of request
+			// datasouce is the data
+			// true - sends the data asynchronously
+			XMLHttpRequestObject.open("GET", datasource, true);
+
+			// register a callback function
+			// readyState defines the state of the XMLHttpRequest object
+			XMLHttpRequestObject.onreadystatechange = function(){
+				
+				// readyState == 4  response content has finished loading
+				// status == 200 the status of the response to the request is OK
+			if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200){
+					// assign the response of the server in plain text to the innerHTML.
+					obj.innerHTML = XMLHttpRequestObject.responseText;
+				}
+			};
+			// sent request
+			XMLHttpRequestObject.send(null);
+		}
+	}
+</script>
+</head>
+<body>
+<h1> Get data with Ajax </h1>
+
+<form>
+<!-- creates button that calls the getData function passing in the data file and div -->
+<input type="button" value="Display Message" onclick="getData('testdata.txt','targetDiv')">
+</form>
+<div id = targetDiv>
+<p> Here's the data </p>
+</div>
+
+</body>
+</html>

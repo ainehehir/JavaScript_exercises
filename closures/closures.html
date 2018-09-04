@@ -1,0 +1,38 @@
+<!--
+Program: Closures
+-->
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html"; charset = "utf-8"/>
+<title>closures</title>
+
+<script type="text/javascript">
+	
+function doThis(){
+	var test = "local to doThis";
+
+	
+
+    // inner function that has no local variables of its own but has access to the variable declared in the outer function doThis()
+	function displayTest(){
+		alert(test);
+	}
+
+	displayTest();
+}
+
+doThis(); 
+
+
+</script>
+	
+				
+
+	</head>
+	<body>
+	
+	</body>
+
+</html>

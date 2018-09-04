@@ -1,0 +1,45 @@
+<!--
+Program: Event Handling - Closures
+-->
+
+
+
+
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html"; charset = "utf-8"/>
+<title>Closures</title>
+
+<script type="text/javascript">
+
+
+// diplayTest returned from doThis before being executed, normally the local variable would only exist
+// whilst doThis is executing - created a closure
+	
+function doThis(){
+	var test = "local to doThis";
+
+   
+	function displayTest(){
+		alert(test);
+	}
+
+	return displayTest();
+}
+
+var myDoThis = doThis();
+myDoThis();
+
+
+</script>
+	
+				
+
+	</head>
+	<body>
+	
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+
+<!--
+Program: Calculate Fibonacii sequence
+-->
+<html>
+<head>
+	<title>Calculate the Fibonacii sequence</title>
+	<script type="text/javascript">
+	var n = prompt("Please enter a non-negative integer value:");
+
+
+	function calcFib(num){
+		var result;
+
+		if(num >1){
+			result = calcFib(num -1) + calcFib(num -2);
+		}else if (num ==1){
+			result = 1;
+		} else if (num ==0){
+			result = 0;
+		} else {
+			result = null;
+		}
+
+		return result;
+	}
+
+
+	function calcAltFib(num){
+		 var sum;
+		 var term1 = 0;
+		 var term2 = 1;
+
+		 for(var i=0;i<num;i++){
+		 	sum = term1 + term2;
+		 	term1 = term2;
+		 	term2 = sum;
+		 }
+
+		 return term1;
+	}
+	</script>
+</head>
+
+<body>
+<script type="text/javascript">
+	document.write("<h1> You entered the value: " + n + "</h1><hr>");
+
+	document.write("<h1> Using Functional Programming approach </h1>");
+	document.write("<h2> The fibonacci number in position" + n + "of the sequence is: " + calcFib(n) + "</h2>");
+
+
+	document.write("<h1> Using imperative Programming approach </h1>");
+	document.write("<h2> The fibonacci number in position" + n + "of the sequence is: " + calcAltFib(n) + "</h2>");
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+Program: Arrays- adding items to an array
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding items to an array </title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+		// using the length method to add items
+		var myArray = [];
+		myArray[0] = 'January';
+		myArray[1] = 'February';
+		document.write(myArray.length + '<br>'); // outputs: 2
+
+		myArray[myArray.length] = 'March'; //adds item to end of array
+		document.write(myArray.length + '<br>'); //outputs: 3
+
+		document.write('0>'+ myArray[0] + '<br>'); //will output: 0>January
+		document.write('1>'+ myArray[1] + '<br>'); //will output: 1>February
+		document.write('2>'+ myArray[2] + '<br>'); //will output: 2>March
+		
+
+		//using the push method to add items
+		var myArray = [];
+		myArray[0] = 'January';
+		myArray[1] = 'February';
+		myArray.push('March'); //adds item to end of array
+		
+
+		document.write('0>'+ myArray[0] + '<br>'); //will output: 0>January
+		document.write('1>'+ myArray[1] + '<br>'); //will output: 1>February
+		document.write('2>'+ myArray[2] + '<br>'); //will output: 2>March
+
+
+		//using the unshift method 
+		var myArray = [];
+		myArray[0] = 'February';
+		myArray[1] = 'March';
+		myArray.unshift('January'); //Adds item to begining of Array
+
+		document.write('0>'+ myArray[0] + '<br>'); //will output: 0>January
+		document.write('1>'+ myArray[1] + '<br>'); //will output: 1>February
+		document.write('2>'+ myArray[2] + '<br>'); //will output: 2>March				
+</script>
+		
+</body>
+
+</html>

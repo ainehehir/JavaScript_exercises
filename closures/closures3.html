@@ -1,0 +1,65 @@
+<!--
+Program: Event Handling - Closures
+-->
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html"; charset = "utf-8"/>
+<title>Closures3</title>
+
+<script type="text/javascript">
+	
+var Counter = (function()
+
+	{
+	var privateCounter = 0;
+
+
+	function changeby(val)
+	{
+		privateCounter += val;
+	}
+
+	return {
+
+		increment: function(){
+
+		changeby(1);
+		
+		},
+
+		decrement: function(){
+
+			changeby(-1);
+		},
+
+		value: function(){
+			return privateCounter;
+		}
+	}
+}	
+)();
+
+alert(Counter.value());  // alerts  0
+
+Counter.increment();
+Counter.increment();
+alert(Counter.value());  //alerts   2
+
+
+Counter.decrement();
+alert(Counter.value()); //alerts 1
+
+
+
+</script>
+	
+				
+
+	</head>
+	<body>
+	
+	</body>
+
+</html>

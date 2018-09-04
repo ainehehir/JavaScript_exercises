@@ -1,0 +1,57 @@
+				<!--
+				Program: Event Handling 
+				- clicking on the innermost div element results in an alert massage box that displays the word inner, followed by another alert message box that displays outer
+				-->
+				<!DOCTYPE html>
+				<html xmlns = "http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+				<head>
+				
+				<meta http-equiv="Content-Type" content="text/html"; charset = "utf-8"/>
+				<title>Event Listening</title>
+				<style type="text/css">
+				
+				#inner {
+				width:400px;
+				height: 100px;
+				background-color: #00f;
+				}
+				
+				#outer{
+				width: 400px;
+				background-color: #ff0;
+				padding: 10px;
+				
+				}
+				</style>
+				
+				<script type="text/javascript">
+				
+				
+				function manageEvent(eventObject, event, eventHandler){
+				eventObject.addEventListener(event, eventHandler, false);
+				//set event handling to capturing phase by setting the parameter to true
+				eventObject.addEventListener(event, eventHandler, true);
+				}
+				
+				
+				manageEvent(window,"load" function (){
+				manageEvent(document.getElementById('inner'), "click", clickHandler);
+				manageEvent(document.getElementById('outer'), "click", clickHandler);
+				
+				});
+				
+				
+				function clickHandler(){
+				alert(this.id);
+				}
+				
+				</script>
+				</head>
+				<body>
+				<div id = "outer">
+				<div id = "inner">
+				</div>
+				</div>
+				</body>
+				
+				</html>

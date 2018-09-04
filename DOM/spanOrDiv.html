@@ -1,0 +1,22 @@
+
+<!--
+Program: DOM manipulation - <div></div> these are block elements which means they automatically set off on thier own lines
+We use <span></span> elements if we want to place text inline
+-->
+<html>
+<head>
+	<title>Using a Span</title>
+	<script type="text/javascript">
+	function displayText(){
+
+	
+		document.getElementById("targetSpan").innerHTML = "You're using JavaScript here!"; 
+	}
+	</script>
+</head>
+
+<body>
+<h1 onclick = "displayText()"> Click to modify page a span's innerHTML.</h1>
+The text appears inline here:<span id="targetSpan"></span>
+</body>
+</html>

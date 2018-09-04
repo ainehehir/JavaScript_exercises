@@ -1,0 +1,24 @@
+<!--
+Program: Arrays- toSource method is a firefox extension which takes the contents of the array and return the source code.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array toSource </title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = ["a","b","c",{'sky':'blue','grass':'green'}];
+		var theSource = myArray.toSource();
+
+		document.write(theSource + '<br>'); // outputs: ["a","b","c",{sky:"blue", grass:"green"}]
+				
+</script>
+		
+</body>
+
+</html>

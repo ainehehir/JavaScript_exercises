@@ -1,0 +1,28 @@
+<!--
+Program: Arrays- Join method will output the array as a string with the delimiter of your choice
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Join</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [1,'two',3,'four',5,'six',7,'eight',9,'ten'];
+		var test1 = myArray.join();
+		var test2 = myArray.join( ',');
+		var test3 = myArray.join('+');
+
+		document.write(test1+'<BR>'); //outputs: 1,two,3,four,5,six,7,eight,9,ten
+		document.write(test2 + '<BR>'); //outputs: 1, two, 3, four, 5, six, 7, eight, 9, ten
+		document.write(test3 + '<BR>'); //outputs:1+two+3+four+5+six+7+eight+9+tenS
+</script>
+		
+</body>
+
+
+</html>

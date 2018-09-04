@@ -1,0 +1,31 @@
+<!--
+Program: program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+-->
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+var size = 8;
+
+var board = "";
+
+for(var y = 0; y < size; y++) {
+  for(var x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0)
+      board += "3";
+    else
+      board += "#";
+  }
+  board += "<br/>";
+}
+document.write(board);
+	
+
+		
+	
+	</script>
+</body>
+</html>

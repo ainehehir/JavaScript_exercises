@@ -1,0 +1,30 @@
+<!--
+Program: Arrays- Arrays can store anything you can assign to a varaiable, boolean, numbers, string, functions, objects and other arrays
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intialising Array</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [3,'Hello',function(){return 5},{'color':'blue', 'budget':25},/[ell]/i];
+		
+
+		document.write('0>' + myArray[0] + '<br>');  //outputs: 0>3
+		document.write('1>' + myArray[1] + '<br>');	// outputs: 1>Hello
+		document.write('2>' + myArray[2]() + '<br>'); //outputs: 2>5
+		document.write('3>' + myArray[3].color + '<br>'); // outputs: 3> blue
+		document.write('4>' + myArray[3].budget + '<br>'); // ouputs: 4> 25
+		document.write('5>' + myArray[4].test(myArray[1]) + '<br>'); // ouputs: 4> true 
+
+</script>
+		
+</body>
+
+
+</html>

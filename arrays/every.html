@@ -1,0 +1,33 @@
+<!--
+Program: Arrays- every method: firefox method which accepts a function as an argument.Every value
+of the array is passed to that function until the function returns false 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array every function</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var isNumeric = function(x){
+
+
+			//returns true if x is numeric and false if it is not
+			var RegExp = /^(-)?(\d*)(\.?)(\d*)$/;
+			return String(x).match(RegExp);
+		}
+var myArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+document.write(myArray.every(isNumeric) + '<br>');  //outputs: true
+var myArray = [1,2,3,4,5,6,7,8,9,'ten',11,12,13,14,15];
+document.write(myArray.every(isNumeric));  //outputs: false
+		
+</script>
+		
+</body>
+
+
+</html>

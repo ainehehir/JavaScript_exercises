@@ -1,0 +1,33 @@
+<!--
+Program: Arrays- filter method that creates a new array of items which evaluate to true in the supplied function.
+
+Below the code extract all the numbers and creates a new array in the process
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array filter</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var isNumeric = function (x) {
+			// returns true if x is numeric and false if it is not
+
+			var RegExp = /^(-)?(\d*)(\.?)(\d*)$/;
+			return String(x).match(RegExp);
+		}
+
+
+		var myArray = [1,'two',3,'four',5,'six',7,'eight',9,'ten'];
+		var oddArray = myArray.filter(isNumeric);
+		document.write(oddArray); //outputs: 1,3,5,7,9,
+</script>
+		
+</body>
+
+
+</html>

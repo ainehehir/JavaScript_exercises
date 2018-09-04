@@ -1,0 +1,23 @@
+
+<!--
+Program: DOM manipulation - write to specific part of a HTML page using a div
+-->
+<html>
+<head>
+	<title>Using a div</title>
+	<script type="text/javascript">
+	
+	function displayText(){
+
+		//using the innerHTML property to access the text inside the div
+		document.getElementById("targetDiv").innerHTML = "You're using JavaScript here!"; 
+	}
+	</script>
+</head>
+
+<body>
+<h1 onclick = "displayText()"> Click to modify page.</h1>
+<div id="targetDiv"></div>
+	
+</body>
+</html>

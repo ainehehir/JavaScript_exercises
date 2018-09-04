@@ -1,0 +1,32 @@
+<!--
+Program: Arrays- If you skip elements the Blank array elemments will be type undefined
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intialising Array</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [];
+		myArray[0] = 'January';
+		myArray[1] = 'February';
+		myArray[5] = 'March';
+
+		document.write('0>' + myArray[0] + '<br>');  //outputs: 0>January
+		document.write('1>' + myArray[1] + '<br>');	// outputs: 1>February
+		document.write('2>' + myArray[2] + '<br>'); //outputs: 2>undefined
+		document.write('3>' + myArray[3] + '<br>'); // outputs: 3> undefined
+		document.write('4>' + myArray[4] + '<br>'); // ouputs: 4> undefined
+		document.write('5>' + myArray[5] + '<br>'); // ouputs: 5> March
+
+</script>
+		
+</body>
+
+
+</html>

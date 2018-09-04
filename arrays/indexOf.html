@@ -1,0 +1,34 @@
+<!--
+Program: Arrays- indexOf method will search the array until it matches your search criteria
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array indexOf</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+	var myArray = [1,'two',3,'four',5,'six',7,'eight',9,'ten'];
+
+	document.write(myArray.indexOf('six') +'<br>');  //outputs: 5
+	document.write(myArray.indexOf('not here')); //outputs: -1
+
+ 	//find and return all occurrences of an item 
+	var foundItems = [];
+	var index = array.indexOf(element)
+	while (index != -1)
+	{
+		foundItems.push(index);
+		index = array.indexOf(element, ++index);
+	}
+		
+</script>
+		
+</body>
+
+
+</html>

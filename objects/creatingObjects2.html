@@ -1,0 +1,48 @@
+
+<!--
+Program: Creating objects -Bird and Ostrich object
+-->
+
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Create objects</title>
+	<script type="text/javascript">
+
+	var personName = ["John", "Jill", "Joan", "Jimmy"];
+
+	for (var i in personName){
+		document.write(i + "=>" + personName[i] + "</br>");
+	}
+
+	//define bird object
+	function Bird()
+	{
+		this.beak = true;
+		this.name = "ossie";
+
+		return true;
+	}
+	//define ostrich object
+	function Ostrich()
+	{
+		this.superclass = Bird;
+		this.superclass();
+		this.canFly = false;
+
+		return true;
+	}
+//creates new ostrich object
+var myOstrich = new Ostrich();
+//outputs myOStrich details
+for( var i in myOstrich){
+	document.write( i + "=>" + myOstrich[i] + "</br>");
+	
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

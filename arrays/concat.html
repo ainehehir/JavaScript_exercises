@@ -1,0 +1,32 @@
+<!--
+Program: Arrays- concat method: appends the passed values to the end of the array, passing back a new array containing the joined values
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array concat</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [1,2,3];
+		var newArray = [4,5,6];
+		var seven = 7;
+		var eight = 'eight';
+		var nine = {'sky':'blue','grass':'green'};
+		
+		var joinedArray = myArray.concat(newArray,seven,eight,nine);
+
+		document.write(myArray + '<br>'); //outputs: 123
+		document.write(joinedArray); // outputs: 1,2,3,4,5,6,7,'eight',[object object]
+
+		
+</script>
+		
+</body>
+
+
+</html>

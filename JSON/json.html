@@ -1,0 +1,69 @@
+<!-- Program: Example of using JSON 
+-->
+
+
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang ="eng" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src = "ajax.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	 var myFirstJson = { 
+	 					"firstName":"John",
+	 					"lastName" : "Doe",
+	 					"age":"23"};
+
+	 var mySecondJson = {
+	 					"firstName": "Alan",
+	 					"lastName" : "Smith",
+	 					"age":"35"};
+
+	 var ACCS = {
+	 					"lecturer": "M Bradford",
+	 					"room":"scr2",
+	 					"course":"MSCWebTech",
+	 					"time":"11"};
+
+</script>
+	<title>Simple JSON Demo</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font size = "+3">Json Demo</font></p>
+<hr/>
+
+<div id = "zone"></div>
+
+<p>
+<h3> Here are the contents of the JSON Objects:</h3>
+
+<script type="text/javascript">
+	document.write("First Name:");
+	document.write(myFirstJson.firstName); //outputs: John
+	document.write("</br> Last Name");
+	document.write(myFirstJson.lastName + "\n"); //outputs: Doe
+	document.write("<br/>Age:");
+	document.write(myFirstJson.age); //outputs 23
+	document.write("<br/><hr/>");
+
+
+	document.write("First Name:");
+	document.write(mySecondJson.firstName); //outputs: John
+	document.write("</br> Last Name");
+	document.write(mySecondJson.lastName + "\n"); //outputs: Doe
+	document.write("<br/>Age:");
+	document.write(mySecondJson.age); //outputs 23
+	document.write("<br/><hr/>");
+
+
+	document.write("lecturer:" + ACCS.lecturer + "<br/> Course: " + ACCS.course + "<br/><hr/>");
+
+
+
+</script>
+</p>
+<br/>
+
+</body>
+</html>

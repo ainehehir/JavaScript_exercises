@@ -1,0 +1,35 @@
+<!--
+Program: return a value from a function by using the return statement
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sum Numbers</title>
+
+	<script type="text/javascript">
+
+		// user enters values that are assigned to a varibles
+	var x = prompt("Enter a number: ");
+	x = new Number(x);
+	var y = prompt("Enter another number: ");
+	y = new Number(y);
+
+	// function to add two values and return result to where the function was called
+	function sum(a,b){
+		return(a + b);
+	}
+	
+	</script>
+	</head>
+	<body>
+	<script type="text/javascript">
+	// calls the sum function 
+	document.write("<h1> The sum of the numbers you enetered is " + sum(x,y) + "</h1>");
+
+
+	</script>
+		
+	</body>
+
+
+</html>

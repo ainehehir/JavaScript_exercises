@@ -1,0 +1,109 @@
+
+<!--
+Program: Creating objects - creates a person and programmer objects
+-->
+
+<html>
+	<head>
+		<script type="text/javascript">
+
+		//Define person object
+	function Person()
+		{
+			//attributes
+			this.name = "";
+			this.age = 0;
+			this.city = "";
+
+			//behaviours
+			this.grow = function()
+			{
+				alert("My name is  " + this.name + "& I am growing now");
+			}
+
+			this.sleep = function()
+			{
+				alert("my name is  " + this.name + " & I am sleeping now");
+			}
+			return true;
+		}
+
+		//define programmer object - derived from person object
+		function Programmer()
+		{
+			this.superclass = Person;
+			this.superclass();
+
+			this.favouriteLanguage = "javascript";
+			this.blogger = false;
+			return true;
+		}
+
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		//create new Person object called person1
+		var person1 = new Person();
+
+
+		//set attributes values for person1
+		person1.name = "Bill";
+		person1.age =32;
+		person1.city = "Dodge";
+
+		//invoke behaviours for person1
+		person1.grow();
+		person1.sleep();
+
+
+		//create new programmer object called programmer1
+		programmer1 = new Programmer();
+		programmer1.name = "Alice";
+		programmer1.age = 45;
+		programmer1.city = "Ocean";
+		programmer1.blogger = true;
+
+		programmer1.grow();
+		programmer1.sleep();
+
+
+		//outputs person1 details
+			document.write("<h1> Details for person1 </h1>");
+
+		for(var i in person1){
+			if((typeof person1[i]) != "function")
+			{
+				document.write("<h2>" + i +  ":" + person1[i] + "</h2>");
+			}
+		}
+
+
+		//outputs programmer1 details
+		document.write("<h1> Details for programmer1</h1>");
+		for(var i in programmer1){
+			if((typeof programmer1[i]) != "function")
+			{
+
+			document.write("<h2>" + i + ":" + programmer1[i]) + "</h2>";
+			}
+		}
+
+
+		alert("lets create a new person!");
+		//create a new programmer object called programmer2
+		var programmer2 = new Programmer();
+
+		//prompt for attributes values and output programmer2 details
+		document.write("<h1> Details of programmer2</h1>");
+		for (var i in programmer2){
+			if((typeof programmer2[i]) != "function");
+			{
+				programmer2[i] = prompt("Enter " + i + "please.");
+				document.write("<h2>" + i + ":" + programmer2[i] + "</h2>");
+			}
+		}
+		</script>
+	</body>
+</html>

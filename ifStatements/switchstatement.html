@@ -1,0 +1,67 @@
+
+<!--
+Program: switch selection structure
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switching between HTML List formats</title>
+
+	<script type="text/javascript">
+
+	var choice,					//users choice
+		startTag,				//starting list item tag
+		endTag,					//ending list item tag
+		validInput = true,		//indicates if input is valid
+		listType;				//list type as a string
+
+		choice = window.prompt("Select a list style: \n" + "1 (bullet), 2(numbered), 3(lettered)","1");
+
+		//varaible choice is given the value input by the user in the prompt dialog
+		switch(choice){
+			case "1": //the value of choice is evaluted against each of the values of the case labels
+				startTag = "<ul>";
+				endTag = "</ul>";
+				listType = "<h1> Bullet list </h1>";
+				break; //break statement causes program control to proceed with the first statement after the switch structure
+
+
+			case "2":
+				startTag = "<ol>";
+				endTag = "</ol>";
+				listType = "<h1> Ordered list:Numbered</h1>";
+				break; 
+
+			case "3": 
+				startTag = "<ol type = \"A\">";
+				endTag = "</ol>";
+				listType = "<h1> Ordered List: Lettered</h1>";
+				break;
+
+			default:
+			validInput = false;
+
+		}
+
+		if(validInput == true){
+
+			document.write(listType +startTag);
+
+			for(var i=1; i<=3; ++i){
+				document.write("<li> List item " + i + "</li>");
+			}
+		
+			document.write(endTag);
+		} else {
+			document.write("Invalid choice: " + choice);
+		}
+
+	</script>
+	</head>
+	<body>
+	<p> Click Refresh (or Reload) to run the script again</p>
+		
+	</body>
+
+
+</html>

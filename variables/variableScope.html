@@ -1,0 +1,50 @@
+<!--
+Program: variable scope -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variable scope</title>
+
+	<script type="text/javascript">
+
+	var global = 'this is a gloabl';
+
+	function scopeFunction(){
+		alsoGlobal = 'This is also global';
+		var notGlobal ='This is private to scopeFunction';
+	
+	
+
+	function subFunction(){
+		alert(notGlobal); //we can still access notGobal in this child function
+
+		stillGlobal = 'no var keyword so this is global';
+		var isPrivate = "This is private to subFunction";
+	}
+
+	alert(stillGlobal); //this is an error since we haven't excuted subfunctiom
+	subfunctiom(); //excutes subfunction
+	alert(stillGlobal); //this will output "no var keyword so this is global"
+	alert(isPrivate); //this generate an error since isPrivate is private to subFunction()
+
+
+	alert(global); // outputs 'this is global'
+	}
+	
+
+	alert(global); //outputs 'this is global'
+	alert(alsoGlobal); //genterates an error since we haven't run scopeFunction yet
+	scopeFunction();
+	alert(alsoGlobal); //outputs 'this is also global'
+	alert(notGlobal);  //generates error
+
+
+	</script>
+	</head>
+	<body>
+		
+	</body>
+
+
+</html>

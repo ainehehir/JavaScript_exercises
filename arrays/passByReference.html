@@ -1,0 +1,29 @@
+<!--
+Program: Arrays- Passing arrays by reference to functions
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passing arrays by reference</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+var myArray = ['zero','one','two','three','four','five'];
+document.write(myArray[1] + '<br>'); //output: one
+
+function passedByReference(refArray){
+	refArray[1] = 'changed'
+}
+
+passedByReference(myArray);
+document.write(myArray[1]);  //outputs: changed
+
+</script>
+		
+</body>
+
+
+</html>

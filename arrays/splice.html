@@ -1,0 +1,52 @@
+<!--
+Program: Arrays- splice method allows you to delete an element from the array by specifying the index you'd like to delete and then how many elements you would like to delete from that point.Can also specify any number of elements to insert into the array at that point.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array splice </title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+		var myArray = [1,2,3,4,5,6,7,8,9,10];
+		var newArray = [];
+
+		//delete one item at the 5th index
+		newArray = myArray.splice(5,1);
+		document.write(myArray + '<br>'); //outputs: 1,2,3,4,5,7,8,9,10
+		document.write(newArray + '<br>'); //outputs:6
+
+		//truncate the array at the 5th index
+		myArray = [1,2,3,4,5,,6,7,8,9,10];
+		newArray = myArray.splice(5);
+		document.write(myArray +'<br>'); // outputs: 1,2,3,4,5
+		document.write(newArray + '<br>'); //outputs: 6,7,8,9,10
+
+
+		//do nothing at all
+		myArray = [1,2,3,4,5,6,7,8,9,10];
+		newArray = myArray.splice();
+		document.write(myArray +'<br>'); //outputs: 1,2,3,4,5,6,7,8,,9,10
+		document.write(newArray + '<br>'); //outputs: undefined
+
+		//cut out the middle and insert 'blue' and 'green'
+		myArray = [1,2,3,4,5,6,7,8,9,10];
+		newArray = myArray.splice(1,8, 'blue','green');
+		document.write(myArray + '<br>'); //outputs: 1,blue,green,10
+		document.write(newArray + '<br>'); //outputs: 2,3,4,5,6,,7,8,9
+
+		//insert without deleting
+		myArray = [1,2,3,4,5,6,7,8,9,10];
+		newArray = myArray.splice(5,0, '*');
+		newArray = myArray.splice(4,0, '*');
+		document.write(myArray); //outputs: 1,2,3,4,*,5,*,6,7,8,9,10
+				
+</script>
+		
+</body>
+
+</html>
